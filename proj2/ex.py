@@ -39,7 +39,7 @@ cv2.imwrite("./go2_output.jpg", rimg)
 feat1 = np.array(faces1[0].normed_embedding , dtype=np.float32) # np.dot 은 2개의 임배딩 곱?을 행렬곱-> 행렬곱은 코사인 유사도를 나타낸다. 
 feat2 = np.array(faces2[0].normed_embedding , dtype=np.float32) 
 # 유사도 비교 부분 행렬곱 진행 코사인 시밀러리티로 2개의 데이터간의 유사도를 측정할수 있습니다.
-# -1 ~ 1 사이에 값이 나온다.
+# -1 ~ 1 사이에 값이 나온다. 1로 가까울 수록 닮은 사람이다.
 # 동일인기준으로 threshold를 0.4정도로 잡는다.
 # 얼굴특징인 feats로 나타낸다.
 sim = np.dot(feat1, feat2.T) # 뒤에 있는 행렬은 세로 배열해야해서 .T로 트랜스폼 해준다. 이래서 나온 값이 '유사도'
