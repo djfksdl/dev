@@ -15,9 +15,10 @@ app.prepare(ctx_id=0, det_size=(640,640))
 from insightface.data import get_image as ins_get_image
 img = ins_get_image('t1')
 
-# STEP 4
+# STEP 4 - 4개 task를 다 돌린 값이 들어와있다.
 faces = app.get(img)
 assert len(faces)==6
+print(faces[0])
 
 # STEP 5
 rimg = app.draw_on(img, faces)
