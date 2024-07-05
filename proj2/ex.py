@@ -7,7 +7,7 @@ import numpy as np
 import insightface
 from insightface.app import FaceAnalysis
 
-# STEP 2 -> 어디에 다운받아지냐면 컨트롤로 들어가면 있음
+# STEP 2 -> 어디에 다운받아지냐면 컨트롤로 FaceAnalysis()들어가면 있음
 app = FaceAnalysis()
 app.prepare(ctx_id=0, det_size=(640,640))
 
