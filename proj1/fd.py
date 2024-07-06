@@ -82,7 +82,7 @@ options = vision.FaceDetectorOptions(base_options=base_options)
 detector = vision.FaceDetector.create_from_options(options)
 
 # STEP 3: Load the input image.
-image = mp.Image.create_from_file("image.jpg")
+image = mp.Image.create_from_file("IE001864004_STD.jpg")
 
 # STEP 4: Detect faces in the input image.
 detection_result = detector.detect(image)
